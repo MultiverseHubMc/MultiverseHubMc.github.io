@@ -24,7 +24,18 @@
             z-index: 1000;
         }
 
-        header h1 {
+        header .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        header .logo img {
+            max-width: 150px;
+            margin-right: 20px;
+        }
+
+        header .logo h1 {
             font-size: 3.5em;
             margin: 0;
             color: #FFD700;
@@ -96,8 +107,17 @@
             background: linear-gradient(45deg, #ff0000, #ff8c00);
         }
 
-        .discord-widget {
+        .media-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 20px;
             margin-top: 50px;
+            padding: 30px;
+        }
+
+        .discord-widget {
+            flex: 1;
         }
 
         .discord-widget h2 {
@@ -106,6 +126,16 @@
         }
 
         iframe {
+            border-radius: 15px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .video-container {
+            flex: 1;
+        }
+
+        .video-container video {
+            width: 100%;
             border-radius: 15px;
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
         }
@@ -136,7 +166,10 @@
 </head>
 <body>
     <header>
-        <h1 class="fade-in">MultiverseHubMC</h1>
+        <div class="logo fade-in">
+            <img src="https://multiversehubmc.github.io/minecraft_title.png" alt="Logo MultiverseHubMC">
+            <h1>MultiverseHubMC</h1>
+        </div>
         <p class="fade-in">L'esperienza Minecraft definitiva per ogni dimensione!</p>
     </header>
 
@@ -152,9 +185,18 @@
             </div>
         </div>
 
-        <div class="discord-widget fade-in">
-            <h2>Unisciti alla nostra comunità</h2>
-            <iframe src="https://discord.com/widget?id=YOUR_SERVER_ID&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0"></iframe>
+        <div class="media-section">
+            <div class="discord-widget fade-in">
+                <h2>Unisciti alla nostra comunità</h2>
+                <iframe src="https://discord.com/widget?id=YOUR_SERVER_ID&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0"></iframe>
+            </div>
+            <div class="video-container fade-in">
+                <h2>Scopri MultiverseHubMC</h2>
+                <video controls>
+                    <source src="https://example.com/video.mp4" type="video/mp4">
+                    Il tuo browser non supporta il tag video.
+                </video>
+            </div>
         </div>
     </div>
 
