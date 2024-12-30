@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MultiverseHubMC</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: #fff;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        header {
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.8);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            font-size: 3.5em;
+            margin: 0;
+            color: #FFD700;
+            text-shadow: 2px 2px 5px #000;
+        }
+
+        header p {
+            font-size: 1.5em;
+            margin-top: 10px;
+            color: #FFD700;
+        }
+
+        .content {
+            padding: 50px 20px;
+            background: url('https://example.com/background.jpg') no-repeat center center/cover;
+        }
+
+        .server-info {
+            margin: 30px auto;
+            padding: 30px;
+            border-radius: 15px;
+            background: rgba(0, 0, 0, 0.7);
+            max-width: 900px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+            color: #FFD700;
+        }
+
+        .server-info h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .server-info p {
+            font-size: 1.2em;
+            line-height: 1.8;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 25px;
+            font-size: 1.2em;
+            color: #fff;
+            background: linear-gradient(45deg, #ff8c00, #ff0000);
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: transform 0.3s, background 0.3s;
+        }
+
+        .button:hover {
+            transform: scale(1.1);
+            background: linear-gradient(45deg, #ff0000, #ff8c00);
+        }
+
+        .discord-widget {
+            margin-top: 50px;
+        }
+
+        .discord-widget h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        iframe {
+            border-radius: 15px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        footer {
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.9);
+            font-size: 1em;
+            color: #FFD700;
+            text-shadow: 1px 1px 5px #000;
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Animazioni */
+        .fade-in {
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="fade-in">MultiverseHubMC</h1>
+        <p class="fade-in">L'esperienza Minecraft definitiva per ogni dimensione!</p>
+    </header>
+
+    <div class="content">
+        <div class="server-info fade-in">
+            <h2>Benvenuto su MultiverseHubMC!</h2>
+            <p>Esplora mondi emozionanti, unisciti agli amici e vivi avventure epiche. Unisciti a noi su <strong>play.multiversehubmc.com</strong>!</p>
+            <a href="https://multiversehubmc.com" class="button">Scopri di più</a>
+        </div>
+
+        <div class="discord-widget fade-in">
+            <h2>Unisciti alla nostra comunità</h2>
+            <iframe src="https://discord.com/widget?id=YOUR_SERVER_ID&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0"></iframe>
+        </div>
+    </div>
+
+    <script>
+        // Animazione semplice al caricamento
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.fade-in').forEach(el => {
+                el.style.opacity = 0;
+                setTimeout(() => el.style.opacity = 1, 200);
+            });
+        });
+    </script>
+</body>
+</html>
