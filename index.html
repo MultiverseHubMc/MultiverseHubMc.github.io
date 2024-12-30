@@ -43,6 +43,9 @@
         }
 
         .server-info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
             margin: 30px auto;
             padding: 30px;
             border-radius: 15px;
@@ -50,6 +53,11 @@
             max-width: 900px;
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
             color: #FFD700;
+        }
+
+        .server-info .info-text {
+            flex: 1;
+            padding: 20px;
         }
 
         .server-info h2 {
@@ -62,9 +70,16 @@
             line-height: 1.8;
         }
 
+        .server-info .buttons {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
         .button {
             display: inline-block;
-            margin-top: 20px;
             padding: 10px 25px;
             font-size: 1.2em;
             color: #fff;
@@ -127,9 +142,14 @@
 
     <div class="content">
         <div class="server-info fade-in">
-            <h2>Benvenuto su MultiverseHubMC!</h2>
-            <p>Esplora mondi emozionanti, unisciti agli amici e vivi avventure epiche. Unisciti a noi su <strong>play.multiversehubmc.com</strong>!</p>
-            <a href="https://multiversehubmc.com" class="button">Scopri di più</a>
+            <div class="info-text">
+                <h2>Benvenuto su MultiverseHubMC!</h2>
+                <p>Esplora mondi emozionanti, unisciti agli amici e vivi avventure epiche. Unisciti a noi su <strong>play.multiversehubmc.com</strong>!</p>
+            </div>
+            <div class="buttons">
+                <button class="button" id="copy-ip">Copia IP</button>
+                <a href="https://discord.com/invite/YOUR_SERVER_ID" class="button">Entra nel Discord</a>
+            </div>
         </div>
 
         <div class="discord-widget fade-in">
@@ -138,12 +158,24 @@
         </div>
     </div>
 
+    <footer>
+        &copy; 2024 MultiverseHubMC. Tutti i diritti riservati. | <a href="#" style="color: #FFD700; text-decoration: underline;">Privacy Policy</a>
+    </footer>
+
     <script>
         // Animazione semplice al caricamento
         document.addEventListener('DOMContentLoaded', () => {
             document.querySelectorAll('.fade-in').forEach(el => {
                 el.style.opacity = 0;
                 setTimeout(() => el.style.opacity = 1, 200);
+            });
+
+            // Funzione copia IP
+            const copyIpButton = document.getElementById('copy-ip');
+            copyIpButton.addEventListener('click', () => {
+                navigator.clipboard.writeText('play.multiversehubmc.com').then(() => {
+                    alert('IP copiato negli appunti!');
+                });
             });
         });
     </script>
